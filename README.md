@@ -6,6 +6,7 @@
 
 ### USAGE
 
-1. Run `npm install`.
-2. Run `npm start` and go to `http://localhost:4005`
-3. That's it, thanks for checking :)
+Converted to use `parcel` for managing dependencies.
+
+1. run `yarn start`
+2. goto `http://localhost:1234`

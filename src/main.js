@@ -5,34 +5,34 @@ import Button from './core/Button';
 import ReelContainer from './core/ReelContainer';
 
 export default class App extends Controller {
-	constructor() {
-		super();
-		this.width = window.innerWidth;
-		this.height = window.innerHeight;
-		this.createRenderer();
-		
-		new Loader(this.init.bind(this));
-	}
+  constructor() {
+    super();
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.createRenderer();
 
-	init() {
-		this.createScene();
-		this.createReels();
-		this.createButton();
-		this.animate()
-	}
+    new Loader(this.init.bind(this));
+  }
 
-	createScene() {
-		this.background = new Background();
-		this.stageAdd(this.background.container);
-	}
+  init() {
+    this.createScene();
+    this.createReels();
+    this.createButton();
+    this.animate();
+  }
 
-	createReels() {
-		this.reels = new ReelContainer(this.stageAdd.bind(this));
-		this.stageAdd(this.reels.container);
-	}
+  createScene() {
+    this.background = new Background();
+    this.stageAdd(this.background.container);
+  }
 
-	createButton() {
-		this.button = new Button(this.onStartSpin.bind(this));
-		this.stageAdd(this.button.container);
-	}
+  createReels() {
+    this.reels = new ReelContainer(this.stageAdd.bind(this));
+    this.stageAdd(this.reels.container);
+  }
+
+  createButton() {
+    this.button = new Button(this.onStartSpin.bind(this));
+    this.stageAdd(this.button.container);
+  }
 }
